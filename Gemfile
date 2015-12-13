@@ -48,7 +48,10 @@ gem 'devise'
 gem 'paperclip'
 gem 'kaminari'
 
-gem 'therubyracer'
+gem 'therubyracer', '= 0.12.2', platforms: :ruby
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap-material-design', '0.1.4'
 
+group :production, :staging do
+  gem 'rails_12factor'
+end
